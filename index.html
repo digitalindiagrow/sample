@@ -712,6 +712,15 @@ section{
   .bonus-card-visual{height:132px}
   .bonus-card-copy{min-height:0}
 }
+.bonus-card{overflow:hidden;background:#F5F5F5}
+.bonus-card-visual{position:relative;isolation:isolate;display:block;width:100%;height:190px;min-height:190px;padding:0;overflow:hidden;background:#050505}
+.bonus-card-visual .bonus-card-img{position:absolute;inset:0;z-index:0;display:block;width:100%;height:100%;min-width:100%;min-height:100%;object-fit:cover;object-position:center;opacity:1;visibility:visible;filter:saturate(1.05) contrast(1.06) brightness(.78);transform:scale(1.02);transition:transform .45s ease,filter .45s ease}
+.bonus-card:hover .bonus-card-img{transform:scale(1.08);filter:saturate(1.08) contrast(1.08) brightness(.88)}
+.bonus-card-visual::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.48) 100%),radial-gradient(circle at 12% 90%,rgba(226,10,11,.42),transparent 34%);pointer-events:none}
+.bonus-card-visual::after{content:none;display:none}
+.bonus-number{position:absolute;z-index:3;top:14px;right:14px;color:#FFFFFF;background:#E20A0B;border:1px solid rgba(255,255,255,.38);box-shadow:0 10px 24px rgba(226,10,11,.38)}
+.bonus-icon{display:none}
+@media(max-width:580px){.bonus-card-visual{height:168px;min-height:168px}}
 
 .mentor-grid{
   display:grid;
@@ -4634,7 +4643,7 @@ section#learn{
         <p>Grow revenue, boost profits and automate your business with Leadership Funnel Program curated over the years to drive business growth and operational excellence.</p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary hero-advisor-cta" href="#apply"><span class="cta-label">Book a Call with Business Advisor</span> <span class="cta-free">FREE</span> <del>₹999</del></a>
+          <span class="cta-badge-wrap"><a class="btn btn-primary hero-advisor-cta" href="#apply"><span class="cta-label">Book a Call with Business Advisor</span> <del>₹999</del></a><span class="cta-free">FREE</span></span>
         </div>
 
         <div class="hero-social-counters" aria-label="Social proof">
@@ -4745,7 +4754,7 @@ section#learn{
 
           <div class="outcome-highlight-box">
             <div>
-              <strong>12</strong>
+              <strong class="js-counter" data-counter-to="12">0</strong>
               <span>Business Growth Outcomes</span>
             </div>
             <a href="#apply"><span class="cta-label">Book Now</span><span class="cta-free">FREE</span><del>₹999</del></a>
@@ -4753,7 +4762,7 @@ section#learn{
         </div>
 
         <div class="outcomes-grid">
-          <span class="outcomes-wheel-center" aria-hidden="true"><strong>12</strong><small>Business Growth<br>Outcomes</small></span>
+          <span class="outcomes-wheel-center" aria-hidden="true"><strong class="js-counter" data-counter-to="12">0</strong><small>Business Growth<br>Outcomes</small></span>
           <div class="outcome-card reveal"><div class="outcome-icon">💡</div><h3>Innovate Your Products</h3></div>
           <div class="outcome-card reveal"><div class="outcome-icon">🚀</div><h3>Grow Your Revenue</h3></div>
           <div class="outcome-card reveal"><div class="outcome-icon">📈</div><h3>Increase Profit Margins</h3></div>
@@ -4892,7 +4901,7 @@ section#learn{
 
           <div class="format-premium-right">
             <div class="format-seat-note">Limited Physical Seats</div>
-            <a class="format-premium-btn" href="#apply"><span class="cta-label">Book a Call with Business Advisor</span><span class="cta-free">FREE</span><del>₹999</del></a>
+            <span class="cta-badge-wrap"><a class="format-premium-btn" href="#apply"><span class="cta-label">Book a Call with Business Advisor</span><del>₹999</del></a><span class="cta-free">FREE</span></span>
           </div>
 
         </div>
@@ -4912,7 +4921,7 @@ section#learn{
 
       <div class="framework-intro reveal">
         <div class="framework-number">
-          <span>52</span>
+          <span class="js-counter" data-counter-to="52">0</span>
           <strong>Business Frameworks</strong>
         </div>
         <div class="framework-summary">
@@ -5068,15 +5077,15 @@ section#learn{
         <p class="section-sub">Included across paid plans (except Lite Plan)</p>
       </div>
       <div class="bonus-grid">
-        <article class="bonus-card reveal"><div class="bonus-card-visual"><span class="bonus-number">BONUS 01</span><span class="bonus-icon">🎟️</span></div><div class="bonus-card-copy"><h3>3-Day Physical Event</h3><p>Immersive in-person learning experience</p></div></article>
-        <article class="bonus-card reveal"><div class="bonus-card-visual"><span class="bonus-number">BONUS 02</span><span class="bonus-icon">🧭</span></div><div class="bonus-card-copy"><h3>Personalized Coaching</h3><p>Coaching by LFP coaches for 1 year</p></div></article>
-        <article class="bonus-card reveal"><div class="bonus-card-visual"><span class="bonus-number">BONUS 03</span><span class="bonus-icon">🤝</span></div><div class="bonus-card-copy"><h3>Dedicated Team Support</h3><p>Call, WhatsApp, email and Google Meet support for 1 year</p></div></article>
-        <article class="bonus-card reveal"><div class="bonus-card-visual"><span class="bonus-number">BONUS 04</span><span class="bonus-icon">📂</span></div><div class="bonus-card-copy"><h3>Business Documents</h3><p>Ready-to-use business resources</p></div></article>
-        <article class="bonus-card reveal"><div class="bonus-card-visual"><span class="bonus-number">BONUS 05</span><span class="bonus-icon">🧩</span></div><div class="bonus-card-copy"><h3>Access to 52 Frameworks</h3><p>Practical business mastery frameworks</p></div></article>
-        <article class="bonus-card reveal"><div class="bonus-card-visual"><span class="bonus-number">BONUS 06</span><span class="bonus-icon">📘</span></div><div class="bonus-card-copy"><h3>Training Manual</h3><p>Structured implementation guide</p></div></article>
-        <article class="bonus-card reveal"><div class="bonus-card-visual"><span class="bonus-number">BONUS 07</span><span class="bonus-icon">☕</span></div><div class="bonus-card-copy"><h3>Breakfast, Lunch &amp; High Tea</h3><p>Hospitality during the physical event</p></div></article>
-        <article class="bonus-card reveal"><div class="bonus-card-visual"><span class="bonus-number">BONUS 08</span><span class="bonus-icon">🎓</span></div><div class="bonus-card-copy"><h3>E-Certificates</h3><p>Upon completion of assignments</p></div></article>
-        <article class="bonus-card reveal"><div class="bonus-card-visual"><span class="bonus-number">BONUS 09</span><span class="bonus-icon">📊</span></div><div class="bonus-card-copy"><h3>Preferential NICE Analysis Form</h3><p>Exclusively available with the Platinum plan</p></div></article>
+        <article class="bonus-card reveal"><div class="bonus-card-visual"><img class="bonus-card-img" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&amp;fit=crop&amp;w=900&amp;q=72" alt="Business owners attending a live training event"><span class="bonus-number">BONUS 01</span></div><div class="bonus-card-copy"><h3>3-Day Physical Event</h3><p>Immersive in-person learning experience</p></div></article>
+        <article class="bonus-card reveal"><div class="bonus-card-visual"><img class="bonus-card-img" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&amp;fit=crop&amp;w=900&amp;q=72" alt="Business coaching discussion with laptop"><span class="bonus-number">BONUS 02</span></div><div class="bonus-card-copy"><h3>Personalized Coaching</h3><p>Coaching by LFP coaches for 1 year</p></div></article>
+        <article class="bonus-card reveal"><div class="bonus-card-visual"><img class="bonus-card-img" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&amp;fit=crop&amp;w=900&amp;q=72" alt="Business team showing support and unity"><span class="bonus-number">BONUS 03</span></div><div class="bonus-card-copy"><h3>Dedicated Team Support</h3><p>Call, WhatsApp, email and Google Meet support for 1 year</p></div></article>
+        <article class="bonus-card reveal"><div class="bonus-card-visual"><img class="bonus-card-img" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1648337564744-f919c7c2fc02?auto=format&amp;fit=crop&amp;w=900&amp;q=72" alt="Business documents and paperwork review"><span class="bonus-number">BONUS 04</span></div><div class="bonus-card-copy"><h3>Business Documents</h3><p>Ready-to-use business resources</p></div></article>
+        <article class="bonus-card reveal"><div class="bonus-card-visual"><img class="bonus-card-img" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&amp;fit=crop&amp;w=900&amp;q=72" alt="Business strategy frameworks on whiteboard"><span class="bonus-number">BONUS 05</span></div><div class="bonus-card-copy"><h3>Access to 52 Frameworks</h3><p>Practical business mastery frameworks</p></div></article>
+        <article class="bonus-card reveal"><div class="bonus-card-visual"><img class="bonus-card-img" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&amp;fit=crop&amp;w=900&amp;q=72" alt="Notebook and manual style learning material"><span class="bonus-number">BONUS 06</span></div><div class="bonus-card-copy"><h3>Training Manual</h3><p>Structured implementation guide</p></div></article>
+        <article class="bonus-card reveal"><div class="bonus-card-visual"><img class="bonus-card-img" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?auto=format&amp;fit=crop&amp;w=900&amp;q=72" alt="Coffee and refreshments during a business meeting"><span class="bonus-number">BONUS 07</span></div><div class="bonus-card-copy"><h3>Breakfast, Lunch &amp; High Tea</h3><p>Hospitality during the physical event</p></div></article>
+        <article class="bonus-card reveal"><div class="bonus-card-visual"><img class="bonus-card-img" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1638636241638-aef5120c5153?auto=format&amp;fit=crop&amp;w=900&amp;q=72" alt="Certificate document with premium seal"><span class="bonus-number">BONUS 08</span></div><div class="bonus-card-copy"><h3>E-Certificates</h3><p>Upon completion of assignments</p></div></article>
+        <article class="bonus-card reveal"><div class="bonus-card-visual"><img class="bonus-card-img" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=900&amp;q=72" alt="Business analytics dashboard for growth analysis"><span class="bonus-number">BONUS 09</span></div><div class="bonus-card-copy"><h3>Preferential NICE Analysis Form</h3><p>Exclusively available with the Platinum plan</p></div></article>
       </div>
     </div>
   </section>
@@ -7859,6 +7868,32 @@ main>section.hero a.btn-primary::after{
   requestAnimationFrame(function(){counters.forEach(animate);});
 })();
 </script>
+<script id="js-counter-scrollfire">
+(function(){
+  var counters=document.querySelectorAll('.js-counter[data-counter-to]');
+  if(!counters.length)return;
+  function animate(el){
+    if(el.dataset.counterDone==='1')return;
+    el.dataset.counterDone='1';
+    var target=Number(el.getAttribute('data-counter-to')||0);
+    var start=performance.now();
+    var duration=1400;
+    function frame(now){
+      var progress=Math.min((now-start)/duration,1);
+      var eased=1-Math.pow(1-progress,4);
+      el.textContent=Math.round(target*eased).toLocaleString('en-IN');
+      if(progress<1)requestAnimationFrame(frame);else el.textContent=target.toLocaleString('en-IN');
+    }
+    requestAnimationFrame(frame);
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting)animate(entry.target);
+    });
+  },{threshold:.5});
+  counters.forEach(function(c){io.observe(c);});
+})();
+</script>
 <style id="all-cta-unified-offer-final">
 .btn-primary,
 .program-cta,
@@ -7947,6 +7982,100 @@ button[type="submit"]:hover{
     font-size:12px!important;
   }
   .cta-free{min-height:28px;padding:4px 9px!important;font-size:11px!important}
+}
+</style>
+<style id="cta-premium-glow-final">
+@keyframes ctaGlowPulse{
+  0%,100%{box-shadow:0 14px 32px rgba(226,10,11,.30),0 0 0 0 rgba(226,10,11,.45)!important}
+  50%{box-shadow:0 14px 32px rgba(226,10,11,.30),0 0 0 12px rgba(226,10,11,0)!important}
+}
+.btn-primary,
+.program-cta,
+.outcome-highlight-box>a,
+.format-premium-btn,
+.apply-submit,
+.sticky-cta,
+.nav-btn,
+.submit,
+a[class*="cta"]:not(.lead-popup-close),
+button[type="submit"]{
+  animation:ctaGlowPulse 2.4s ease-in-out infinite!important;
+}
+.sticky-cta{position:fixed!important}
+.sticky-cta::before{
+  content:"";
+  flex:0 0 auto;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#FFFFFF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e20a0b' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z'/%3E%3C/svg%3E") center/16px no-repeat!important;
+  box-shadow:0 4px 10px rgba(0,0,0,.18)!important;
+}
+.sticky-cta::after{
+  content:"";
+  flex:0 0 auto;
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  background:#FFFFFF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e20a0b' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='7' y1='17' x2='17' y2='7'/%3E%3Cpolyline points='7 7 17 7 17 17'/%3E%3C/svg%3E") center/13px no-repeat!important;
+  box-shadow:0 4px 10px rgba(0,0,0,.18)!important;
+}
+@media(max-width:560px){
+  .sticky-cta::before,.sticky-cta::after{display:none!important}
+}
+</style>
+<style id="cta-free-badge-corner-final">
+.cta-badge-wrap{
+  position:relative!important;
+  display:inline-block!important;
+  overflow:visible!important;
+  max-width:100%!important;
+}
+.program-cta,
+.outcome-highlight-box>a{
+  position:relative!important;
+}
+.cta-badge-wrap .cta-free,
+.program-cta .cta-free,
+.outcome-highlight-box>a .cta-free,
+.sticky-cta .cta-free{
+  position:absolute!important;
+  top:-12px!important;
+  right:16px!important;
+  flex:none!important;
+  min-height:0!important;
+  padding:3px 10px!important;
+  font-size:10px!important;
+  letter-spacing:.5px!important;
+  color:#e20a0b!important;
+  background:#FFFFFF!important;
+  border:2px solid #FFFFFF!important;
+  border-radius:999px!important;
+  box-shadow:0 4px 10px rgba(0,0,0,.28)!important;
+  z-index:3!important;
+  pointer-events:none!important;
+}
+@media(max-width:560px){
+  .cta-badge-wrap .cta-free,
+  .program-cta .cta-free,
+  .outcome-highlight-box>a .cta-free,
+  .sticky-cta .cta-free{
+    top:-10px!important;
+    right:10px!important;
+    padding:2px 8px!important;
+    font-size:9px!important;
+  }
+  main>section.hero .hero-advisor-cta{
+    grid-template-columns:minmax(0,1fr) auto!important;
+  }
+  html body .sticky-cta{
+    overflow:visible!important;
+  }
+  .format-premium-section .cta-badge-wrap,
+  .cta-badge-wrap{
+    display:block!important;
+    width:100%!important;
+  }
 }
 </style>
 <style id="video-testimonials-premium-style">
@@ -8323,6 +8452,28 @@ main>section#mentor.white-section{
   color:#39374D!important;
   background:#FFFFFF!important;
   border:1px solid #CECDD4!important;
+}
+</style>
+<style id="mentor-badge-stagger-hover">
+#mentor .record-badge{
+  opacity:0;
+  transform:translateY(16px) scale(.96);
+  transition:opacity .5s ease,transform .5s cubic-bezier(.22,1,.36,1),box-shadow .3s ease,background .3s ease;
+  cursor:default;
+}
+#mentor .badge-list .record-badge:nth-child(1){transition-delay:.05s}
+#mentor .badge-list .record-badge:nth-child(2){transition-delay:.15s}
+#mentor .badge-list .record-badge:nth-child(3){transition-delay:.25s}
+#mentor .badge-list .record-badge:nth-child(4){transition-delay:.35s}
+#mentor .badge-list .record-badge:nth-child(5){transition-delay:.45s}
+#mentor .reveal.show .record-badge{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+#mentor .reveal.show .record-badge:hover{
+  transform:translateX(6px) translateY(-3px) scale(1.03)!important;
+  box-shadow:0 12px 26px rgba(226,10,11,.28)!important;
+  background:linear-gradient(145deg,#26233F,#4A4763)!important;
 }
 </style>
 <style id="hero-red-flat-visual-lock">
